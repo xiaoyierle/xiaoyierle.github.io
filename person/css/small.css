@@ -1,0 +1,147 @@
+.container-fiuld{
+	width: 100%;
+}
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+.container-sm-90{
+	width: 90%;
+	margin: 0 auto;
+	
+}
+.col-sm-1{
+	width: 8.33333%;
+}
+.col-sm-2{
+	width: 16.66666%;
+}
+.col-sm-3{
+	width: 25%;
+}
+.col-sm-4{
+	width: 33.333333%;
+}
+.col-sm-5{
+	width: 41.666666%;
+}
+.col-sm-6{
+	width: 50%;
+}
+.col-sm-7{
+	width: 58.333333%;
+}
+.col-sm-8{
+	width: 66.666666%;
+}
+.col-sm-9{
+	width: 75%;
+}
+.col-sm-10{
+	width: 83.333333%;
+}
+.col-sm-11{
+	width: 91.666666%;
+}
+.col-sm-12{
+	width: 100%;
+}
+.col-sm-hid{
+	display: none;
+}
+.col-md-hid{
+	display: block;
+}
+.banner-left-middle{
+	top: 35%;
+}
+.head-top-mobel{
+	height: 54px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	z-index: 10;
+}
+/*.banner-left-middle a{
+	width: 70px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}*/
+.sm-center{
+	text-align: center;
+}
+.header-nav-right a{
+	display: block;
+	border: 1px solid #777;
+	padding: 0;
+	border-radius: 5px;
+	width: 44px;
+	height: 34px;
+	margin-top: 10px;
+	transition: all 0.3s ease-in-out;
+}
+.header-nav-right a:hover{
+	border: 1px solid #ff5555;
+	display: block;
+	padding: 0;
+	border-radius: 5px;
+	width: 44px;
+	height: 34px;
+	margin-top: 10px;
+}
+.header-nav-right a:hover i{
+	display: block;
+	margin: auto;
+	font-size: 32px;
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+	color: #ff5555;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+.header-nav-right a i{
+	display: block;
+	margin: auto;
+	font-size: 32px;
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+	color: #777;
+	text-align: center;
+	
+}
+.banner .banner-Zhezhao .banner-left .banner-left-middle a{
+	width: 100px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 120%;
+	margin: 0 auto;
+}
+.pictures{
+	height: auto;
+}
+.pictures .pictures>h2{
+	color: #333;
+    font-weight: 400;
+    margin: 0 0 30px;
+    margin: 0 auto;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: "微软雅黑";
+}
+.favorite h2{
+	color: #fff;
+    font-weight: 400;
+    margin: 0 0 30px;
+    margin: 0 auto;
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-family: "微软雅黑";
+    text-align: center;
+}
