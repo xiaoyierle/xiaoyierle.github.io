@@ -5,13 +5,16 @@
 		<meta charset="UTF-8" />
 		<title>王郑毅的个人网站</title>
 		<!--<link rel="stylesheet" href="css/jquery.fullPage.css">-->
+		<link rel="stylesheet" id="pageloader-css"  href="css/pageloader.css" type="text/css" media="all" />
+
 		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="css/iconfont.css" />
 		<link rel="stylesheet" href="css/large.css" media="screen and (min-width:1230px)" />
 		<link rel="stylesheet" href="css/big.css" media="screen and (max-width:1230px)" />
 		<link rel="stylesheet" href="css/medium.css" media="screen and (max-width:990px)" />
 		<link rel="stylesheet" href="css/small.css" media="screen and (max-width:768px)" />
-		<link rel="stylesheet" id="pageloader-css"  href="css/pageloader.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/animate.css">
+
 
 		<meta name="x5-orientation" content="portrait | landscape" />
 		<meta name="screen-orientation" content="portrait">
@@ -51,8 +54,8 @@
 		</div>
 
 	</div>
-		<div class="container-fiuld head" id="main">
-			<div class="container-fiuld head-top col-sm-hid">
+		<div class="container-fiuld head" id="fullpage">
+			<div class="container-fiuld head-top col-sm-hid" id="menu">
 				<div class="container head-nav">
 					<div class="head-nav-left">
 						<a href="">
@@ -62,19 +65,19 @@
 					<div class="header-nav-right">
 						<ul>
 							<li>
-								<a href="">主页</a>
+								<a href="#p1" class="active" data-menuanchor="p1">主页</a>
 							</li>
 							<li>
-								<a href="">简介</a>
+								<a href="#p2" data-menuanchor="p2">简介</a>
 							</li>
 							<li>
-								<a href="">项目</a>
+								<a href="#p3" data-menuanchor="p3">项目</a>
 							</li>
 							<li>
-								<a href="">技能</a>
+								<a href="#p4" data-menuanchor="p4">技能</a>
 							</li>
 							<li>
-								<a href="">博客</a>
+								<a href="#p5" data-menuanchor="p5">博客</a>
 							</li>
 
 						</ul>
@@ -95,16 +98,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="banner section">
+			<div class="banner section topMenu">
 				<div class="banner-Zhezhao">
 					<div class="container">
 						<div class="banner-left col-sm-12 col-md-6 col-bg-6 col-lg-6">
 							<div class="banner-left-middle container-sm-90">
-								<h2 class="sm-center">欢迎来到
-									<span>我的主页</span>
+								<h2 class="sm-center">王郑毅
+									<span>个人简历</span>
 								</h2>
-								<div>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-								<a href="" class="btn sm-center">从这里开始</a>
+								<div>这里有一些特效插件、我的简介以及我对于前端的理解！欢迎您的到来！</div>
+								<a href="" class="btn sm-center">查看详情</a>
 							</div>
 						</div>
 						<div class="banner-right col-sm-hid col-md-6 col-bg-6 col-lg-6">
@@ -115,39 +118,46 @@
 					</div>
 				</div>
 			</div>
-			<div class="body container section">
-				<div class="col-lg-4 col-bg-4 col-md-4 col-sm-12 body-first">
-					<div>
-						<i class="iconfont icon-link"></i>
-					</div>
-					<div class="body-first-title">Clean Design</div>
-					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.</p>
-					<div class="a-btn">
-						<a href="" class="btn btn-body-more">阅读更多</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-bg-4 col-md-4 col-sm-12 body-first">
-					<div>
-						<i class="iconfont icon-shouji"></i>
-					</div>
-					<div class="body-first-title">Clean Design</div>
-					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.</p>
-					<div class="a-btn">
-						<a href="" class="btn btn-body-more">阅读更多</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-bg-4 col-md-4 col-sm-12 body-first">
-					<div>
-						<i class="iconfont icon-qianbi01"></i>
-					</div>
-					<div class="body-first-title">Clean Design</div>
-					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.</p>
-					<div class="a-btn">
-						<a href="" class="btn btn-body-more">阅读更多</a>
+			<div class="section personal-jieshao">
+				<div class="container">
+					<h2>个人<span>简介</span></h2>
+					<p class="jieshao">分享是一种生活的信念，思想的深度。明白了分享的同时，<明白了存在的意义></明白了存在的意义></p>
+					<div class="body topMenu">
+						<div class="col-lg-4 col-bg-4 col-md-4 col-sm-12 body-first">
+							<div>
+								<i class="iconfont icon-link"></i>
+							</div>
+							<div class="body-first-title">规范的代码风格</div>
+							<p>页面制作中的HTML、CSS等，这里要明晰W3C标准，知道多浏览器内核（IE、Webkit、移动设备等）的差异、对HTML和CSS的最新技术（如HTML5等）有一定了解。对HTML的语义理解，对页面架构有一定心得，对页面的设计中的渐进和退化有了解。</p>
+							<div class="a-btn">
+								<a href="" class="btn btn-body-more">阅读更多</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-bg-4 col-md-4 col-sm-12 body-first">
+							<div>
+								<i class="iconfont icon-shouji"></i>
+							</div>
+							<div class="body-first-title">对于基础知识的认识</div>
+							<p>精通Javascript，对Javascript的对象、prototype、结构、DOM操作等有清晰的认识；熟悉Jquery等流行JS框架。</p>
+							<div class="a-btn">
+								<a href="" class="btn btn-body-more">阅读更多</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-bg-4 col-md-4 col-sm-12 body-first">
+							<div>
+								<i class="iconfont icon-qianbi01"></i>
+							</div>
+							<div class="body-first-title">对于服务器端语言的认识</div>
+							<p>了解服务器端语言，java php。掌握Javacript与服务器端语言（java、php）的交互</p>
+							<div class="a-btn">
+								<a href="" class="btn btn-body-more">阅读更多</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="pictures container-fiuld section">
+
+			<div class="pictures container-fiuld section topMenu">
 				<div class="pictures container container-sm-90">
 					<h2>项目展示</h2>
 					<ul>
@@ -255,7 +265,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="feature container-fiuld section">
+			<div class="feature container-fiuld section topMenu">
 				<div class="container">
 					<h2>我的<span>技能</span></h2>
 					<p class="jieshao">编程语言是很有意思的一门语言</p>
@@ -266,7 +276,7 @@
 							</div>
 							<div class="content-right">
 								<h3 class="title">HTML5 & CSS3</h3>
-								<p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+								<p class="content">对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级及使用、document flow（文档流）、清除浮动，hasLayout 和 块格式化上下文 (block-formattin contexts) 、reflow&repaint、硬件加速、HTML5（离线 & 存储，多媒体，Web Sockets ,Web Workers，History API2D/3D 绘图）、CSS3、Flexbox、CSS预编译、动画、响应式布局、移动端开发</p>
 							</div>
 						</div>
 						<div class="col-lg-4 col-bg-4 col-md-6 col-sm-12 content-feature">
@@ -275,7 +285,7 @@
 							</div>
 							<div class="content-right">
 								<h3 class="title">Adobe Illustrator</h3>
-								<p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+								<p class="content">能分清设计稿中的公共与私有的部分，对各部分的实现方式有一个初步的方案（包括如何切图、写结构、写样式），给出各部分的实现方案，能同时考虑方案的扩展性、复用性及页面性能，考虑整站的结构分布</p>
 							</div>
 						</div>
 						<div class="col-lg-4 col-bg-4 col-md-6 col-sm-12 content-feature">
@@ -284,7 +294,7 @@
 							</div>
 							<div class="content-right">
 								<h3 class="title">Adobe Photoshop</h3>
-								<p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+								<p class="content">我具备基本的UI技能。多数情况下拿到的只是一张图，如果是一个完整的页面，需要快速分割页面布局。而依赖于不同的页面布局，如响应式、网格、FlexBox布局也会有不同的设计。而有些时候，需要自己规划，制作一个基本的线框图（Wireframe）等等。</p>
 							</div>
 						</div>
 
@@ -294,7 +304,7 @@
 							</div>
 							<div class="content-right">
 								<h3 class="title">Hbuilder</h3>
-								<p class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+								<p class="content">数据类型、面向对象、数组、DOM、BOM、Function、继承、闭包、内置对象、作用域、跨域、原型链、、JSON、XMLHttpRequest、 RegExp、模块化、内存泄漏、事件机制、异步装载回调、模板引擎、前端MVC、NodeJS、JSON、ajax、框架、算法等</p>
 							</div>
 						</div>
 						<div class="col-lg-4 col-bg-4 col-md-6 col-sm-12 content-feature">
@@ -318,30 +328,22 @@
 					</section>
 				</div>
 			</div>
-			<div class="favorite container-fiuld section">
+			<div class="favorite container-fiuld section topMenu">
 				<div class="container">
-					<div class="col-lg-3 col-bg-3 col-md-4 col-sm-6 body-first">
-						<div>
-							<i class="iconfont icon-yundong"></i>
-						</div>
+					<div class="col-lg-3 col-bg-3 col-md-3 col-sm-6 body-first jineng-baifenbi">
+						<canvas id="can1" width="150" height="150"></canvas>
 						<div class="body-first-title favorite-title">运动</div>
 					</div>
-					<div class="col-lg-3 col-bg-3 col-md-4 col-sm-6 body-first">
-						<div>
-							<i class="iconfont icon-youxi"></i>
-						</div>
+					<div class="col-lg-3 col-bg-3 col-md-3 col-sm-6 body-first jineng-baifenbi">
+						<canvas id="can2" width="150" height="150"></canvas>
 						<div class="body-first-title favorite-title">游戏</div>
 					</div>
-					<div class="col-lg-3 col-bg-3 col-md-4 col-sm-6 body-first">
-						<div>
-							<i class="iconfont icon-jisuanji"></i>
-						</div>
+					<div class="col-lg-3 col-bg-3 col-md-3 col-sm-6 body-first jineng-baifenbi">
+						<canvas id="can3" width="150" height="150"></canvas>
 						<div class="body-first-title favorite-title">编程</div>
 					</div>
-					<div class="col-lg-3 col-bg-3 col-md-hid col-sm-6 body-first">
-						<div>
-							<i class="iconfont icon-badaxilietubiao01"></i>
-						</div>
+					<div class="col-lg-3 col-bg-3 col-md-3 col-sm-6 body-first jineng-baifenbi">
+						<canvas id="can4" width="150" height="150"></canvas>
 						<div class="body-first-title favorite-title">骑车</div>
 					</div>
 				</div>
@@ -352,5 +354,6 @@
 	<script src="js/jquery.easing.min.js"></script>
 	<script src="js/jquery.fullpage.js"></script>
 	<script src="js/jianli.js"></script>
+
 	<script src="js/pageloader.js" type="text/javascript"></script>
 </html>
