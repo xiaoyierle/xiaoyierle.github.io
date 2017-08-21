@@ -40,17 +40,17 @@ $(function(){
     let canvas2=document.querySelector("#can2");
     let canvas3=document.querySelector("#can3");
     let canvas4=document.querySelector("#can4");
-    progress(canvas1,80,"red");
-    progress(canvas2,90,"blue");
-    progress(canvas3,50,"yellow");
-    progress(canvas4,50,"yellow");
+    progress(canvas1,100,"#f55");
+    progress(canvas2,90,"#f55");
+    progress(canvas3,80,"#f55");
+    progress(canvas4,80,"#f55");
     function progress(canvas,percent,color="red"){
         let [width,height]=[canvas.width,canvas.height]
         let cobj=canvas.getContext("2d");
         cobj.translate(width/2,height/2);
         let maxAngle=360*percent/100;
         cobj.strokeStyle=color;
-        cobj.lineWidth=10;
+        cobj.lineWidth=12;
         let angle=0;
         cobj.font="20px 微软雅黑";
         cobj.textAlign="center";
@@ -60,6 +60,8 @@ $(function(){
             cobj.clearRect(-width/2,-height/2,width,height);
             cobj.beginPath();
             cobj.arc(0,0,width*0.4,-Math.PI/2,angle*Math.PI/180-Math.PI/2);
+            cobj.lineCap="round";
+            cobj.fillStyle="#fff";
             cobj.fillText(Math.round(angle/360*100)+"%",0,0);
             cobj.stroke();
             if(angle>=maxAngle){
