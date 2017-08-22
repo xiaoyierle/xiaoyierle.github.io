@@ -35,18 +35,18 @@ resizenow();
     });
 });*/
 //百分比技能
-$(function(){
+// $(function(){
     let canvas1=document.querySelector("#can1");
     let canvas2=document.querySelector("#can2");
     let canvas3=document.querySelector("#can3");
     let canvas4=document.querySelector("#can4");
-    progress(canvas1,100,"#f55");
-    progress(canvas2,90,"#f55");
-    progress(canvas3,80,"#f55");
-    progress(canvas4,80,"#f55");
+
     function progress(canvas,percent,color="red"){
         let [width,height]=[canvas.width,canvas.height]
         let cobj=canvas.getContext("2d");
+        cobj.restore();
+        cobj.save();
+        cobj.clearRect(0,0,200,200)
         cobj.translate(width/2,height/2);
         let maxAngle=360*percent/100;
         cobj.strokeStyle=color;
@@ -71,9 +71,11 @@ $(function(){
         }
         fn();
     }
-})
+/*})*/
+
+
 //banner进入
-$(function(){
+// $(function(){
     $('#fullpage').fullpage({
         autoScrolling:false,
         verticalCentered:true,
@@ -83,10 +85,37 @@ $(function(){
         fixedElements:"#menu",
         afterLoad:function(anchor,index){
             if(index===1){
-                $(".banner-left-middle").animate({left:0,animation:"bounceInLeft 1s ease"},1500)
+                $(".banner-left-middle").animate({left:0,animation:"bounceInLeft 1s"},1500)
+                $(".vertical-middle").animate({right:0,animation:"bounceInRight 1s"},1500)
                 // animate($(".banner-left-middle"),{left:0},1500,"bounceInLeft");
-
+            }
+            if(index===2){
+                
+            }
+            if(index===4){
+                $(".content-feature").addClass("content-feature1");
+            }
+            if(index===5){
+                progress(canvas1,100,"#f55");
+                progress(canvas2,90,"#f55");
+                progress(canvas3,80,"#f55");
+                progress(canvas4,80,"#f55");
+            }
+        },
+        onLeave:function(index){
+            if(index===1){
+                $(".banner-left-middle").animate({left:"-700px",animation:"bounceInLeft 1s"},1500)
+                $(".vertical-middle").animate({right:"-700px",animation:"bounceInRight 1s"},1500)
+            }
+            if(index===4){
+                $(".content-feature").removeClass("content-feature1");
+            }
+            if(index===5){
+                progress(canvas1,100,"#f55");
+                progress(canvas2,90,"#f55");
+                progress(canvas3,80,"#f55");
+                progress(canvas4,80,"#f55");
             }
         }
     });
-});
+// });
