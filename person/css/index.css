@@ -201,7 +201,7 @@ a.hover{
 	height: 50%;
     position: absolute;
     top: 35%;
-    right: 0;
+    right: -700px;
 }
 .vertical-middle img{
 	width: 100%;
