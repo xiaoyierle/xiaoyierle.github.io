@@ -8,11 +8,14 @@
             height:100%;
             margin:0;
         }
+        ul{
+            color: #fff;
+        }
         .main{
             width:1000px;
             height:100%;
             margin: 0 auto;
-            background: url("img/bg.jpg") no-repeat;
+            background: url("img/58pic_52393e407b8f5.jpg") no-repeat 100% 100%;
             background-size: cover;
             animation:shake linear 1s infinite alternate;
         }
@@ -33,7 +36,7 @@
         .right{
             width: 200px;
             height:100%;
-            background: rgba(255,68,0,1);
+            background: rgba(13, 141, 255,0);
             float: left;
 
         }
@@ -85,12 +88,32 @@
         .letter{
             width:80px;
             height:80px;
-            border:1px solid red;
+            border-radius: 50%;
             text-align: center;
             line-height: 80px;
             position: absolute;
             font-size: 30px;
             font-weight: bold;
+            background: url("img/paopao.png") 100% 100%;
+            color: #fff;
+            animation: scale 2s linear infinite;
+        }
+        @keyframes scale {
+            0%{
+                transform: scale(1);
+            }
+            25%{
+                transform: scale(1.2);
+            }
+            50%{
+                transform: scale(1);
+            }
+            75%{
+                transform: scale(0.9);
+            }
+            100%{
+                transform: scale(1);
+            }
         }
     </style>
 </head>
