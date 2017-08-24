@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            font-family: "微软雅黑";
+        }
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        body{
+            margin:0;
+            display: flex;
+            flex-direction: column;
+        }
+        .scene{
+            width: 1000px;
+            height:500px;
+            margin:0 auto;
+            background: #E6DF6D;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            position: relative;
+        }
+        .block{
+            width:25px;
+            height:25px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            /*border: 1px solid #333;*/
+            float: left;
+        }
+        .snackbody{
+            background-image: url("img/body.png");
+            background-size: 100% 100%;
+        }
+        .snackheadr{
+            background: url("img/head.png");
+            background-size: contain;
+        }
+        .snackheadl{
+            background: url("img/head.png");
+            background-size: contain;
+            transform: rotate(-180deg);
+        }
+        .snackheadt{
+            background: url("img/head.png");
+            background-size: contain;
+            transform: rotate(-90deg);
+        }
+        .snackheadb{
+            background: url("img/head.png");
+            background-size: contain;
+            transform: rotate(90deg);
+        }
+        .food{
+            background: #8b0 url("img/food.gif") ;
+            background-size: 150%;
+        }
+        .tail{
+            background: url("img/tail.png") ;
+            background-size: contain;
+        }
+        .bottom{
+            width:1000px;
+            flex-grow: 1;
+            background-color: #CCE290;
+            margin:0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        h1{
+            font-size: 40px;
+            line-height: 0px;
+            text-align: center;
+            color: #8b0;
+        }
+        .bottom input{
+            width:100px;
+            height:40px;
+            outline: none;
+            /*background-color: #00ffff;*/
+            border:2px solid #8b0;
+            background-color: #8dbb58;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 20px;
+            color: #fff;
+        }
+        .mask{
+            width: 100%;
+            height:100%;
+            background-color: rgba(0,0,0,.6);
+            display: none;
+            position: absolute;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            top:0;
+            left:0;
+            background-image: url("img/food.gif");
+            background-repeat: no-repeat ;
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <h1>贪吃蛇游戏</h1>
+    <div class="scene">
+        <div class="mask"></div>
+    </div>
+    <div class="bottom">
+        <div>
+            <div class="score">分数 <span class="score">0</span></div>
+        </div>
+        <input type="button" id="start" value="开始">
+        <input type="button" id="pause" value="暂停">
+    </div>
+</body>
+<script src="jQuery1.10.2.js"></script>
+<script>
+    for(var i=0;i<20;i++){
+        for(var j=0;j<40;j++){
+            $("<div></div>").addClass("block").attr("id",j+"-"+i).appendTo(".scene");
+        }
+    }
+    var snackArr=[{x:0,y:0},{x:1,y:0},{x:2,y:0}];
+    var snackHead=snackArr[snackArr.length-1];
+    function drawSnack(){
+        $(".snackbody").removeClass("snackbody");
+        $(".snackheadr").removeClass("snackheadr");
+        $(".snackheadl").removeClass("snackheadl");
+        $(".snackheadt").removeClass("snackheadt");
+        $(".snackheadb").removeClass("snackheadb");
+        $.each(snackArr,function(index,value){
+            $("#"+value.x+"-"+value.y).addClass("snackbody");
+        });
+        $("#"+snackHead.x+"-"+snackHead.y).addClass("snackheadr");
+        switch(dir){
+            case "r": $("#"+snackHead.x+"-"+snackHead.y).addClass("snackheadr");break;
+            case "l": $("#"+snackHead.x+"-"+snackHead.y).addClass("snackheadl");break;
+            case "t": $("#"+snackHead.x+"-"+snackHead.y).addClass("snackheadt");break;
+            case "b": $("#"+snackHead.x+"-"+snackHead.y).addClass("snackheadb");break;
+        }
+    }
+
+    var dir="r";
+    var score=0;
+    function move(){
+        switch(dir){
+            case "r": snackHead={x:snackHead.x+1,y:snackHead.y};break;
+            case "l": snackHead={x:snackHead.x-1,y:snackHead.y};break;
+            case "t": snackHead={x:snackHead.x,y:snackHead.y-1};break;
+            case "b": snackHead={x:snackHead.x,y:snackHead.y+1};break;
+        }
+        snackArr.push(snackHead);
+        var head=$("#"+snackHead.x+"-"+snackHead.y);
+        if(head.hasClass("snackbody")||head.length===0){
+            gameOver();
+        }
+        if(head.hasClass("food")){
+            head.removeClass("food");
+            createFood();
+            score++;
+            $("span.score").html(score);
+        }else{
+            snackArr.shift();
+        }
+        drawSnack();
+        if(score==5){
+            clearInterval(t);
+            t=setInterval(move,200);
+        }else if(score==10){
+            clearInterval(t);
+            t=setInterval(move,100);
+        }
+    }
+    var flag1=true;
+    $("#pause").click(function(){
+        if(flag1){
+            clearInterval(t);
+            $(this).attr({id:"continue",value:"继续"});
+            flag1=false;
+            $(".mask").fadeIn(500);
+        }else{
+            t=setInterval(move,300);
+            $(this).attr({id:"pause",value:"暂停"});
+            flag1=true;
+            $(".mask").fadeOut(500);
+
+        }
+    });
+
+    $(document).keydown(function(e){
+        switch(e.keyCode){
+            case 65:
+            case 37:dir="l";break;
+            case 87:
+            case 38:dir="t";break;
+            case 68:
+            case 39:dir="r";break;
+            case 83:
+            case 40:dir="b";break;
+        }
+    });
+    function createFood(){
+        do {
+            var rx = Math.floor(Math.random() * 20);
+            var ry = Math.floor(Math.random() * 20);
+        }while($("#"+rx+"-"+ry).hasClass("snackbody"));
+        $("#"+rx+"-"+ry).addClass("food");
+    }
+    createFood();
+    function gameOver(){
+        alert(`游戏结束当前得分为${score}`);
+        location.reload();
+    }
+    var t;
+    function start(){
+        drawSnack();
+        t=setInterval(move,300);
+        $("span.score").html("0");
+    }
+    var flag2=true;
+    $("#start").click(function(){
+        if(flag2){
+            flag2=false;
+            start();
+            $(this).attr({id:"pause",value:"结束"});
+        }else{
+            flag2=true;
+            gameOver()
+            $(this).attr({id:"pause",value:"开始"});
+        }
+    });
+</script>
+</html>

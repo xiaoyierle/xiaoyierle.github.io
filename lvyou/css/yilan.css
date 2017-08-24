@@ -1,0 +1,18 @@
+
+.content .row h3 a{
+    font-size: 16px;
+    color: #5a5a5a;
+    margin: 0;
+}
+.content .row img{
+    width:100%;
+}
+.content .row h3{
+    margin:10px 0 0;
+}
+.content .row p.time{
+    font-size: 11px;
+    color: #929292;
+    margin: 0;
+    margin:0 0 10px;
+}

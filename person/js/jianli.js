@@ -90,7 +90,7 @@ resizenow();
                 // animate($(".banner-left-middle"),{left:0},1500,"bounceInLeft");
             }
             if(index===2){
-                
+                $(".body-first div:first-child").animate({animation:"bounceInRight 1s"},1000)
             }
             if(index===4){
                 $(".content-feature").addClass("content-feature1");

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="full-screen" content="yes">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="js/rem.js"></script>
+    <script src="js/jQuery1.10.2.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/todolist.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="topbar">
+        <div class="container">
+            <div class="container-top">
+                <i class="menu">&#xe645;</i>
+                <span>添加新的事项</span>
+                <a href="javascript:history.back(-1);" class="back"></a>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <ul>
+                    <li>查看待办事项</li>
+                    <li>查看已完成事项</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="main">
+        <div class="main-container">
+            <div class="add item">
+                <label>
+                    <textarea autofocus id="text"></textarea>
+                    <div class="notice"><span>000</span>/999</div>
+                </label>
+                <div class="bottom">
+                    <input type="button" class="add1 btn" id="submit" value="添加">
+                </div>
+                <div class="mask"></div>
+            </div>
+            <div class="wait item">
+                <div class="ul-outer">
+                    <ul></ul>
+                </div>
+                <div class="bottom">
+                    <input type="button" class="movebtn btn" value="&#xe69f">
+                    <input type ="button" class="heartbtn btn" value="&#xe608">
+                    <input type="button" class="clearbtn btn" value="&#xe6b0">
+                </div>
+                <button class="addbtn">&#xe68a;</button>
+                <div class="mask"></div>
+            </div>
+            <div class="done item">
+                <div class="ul-outer">
+                    <ul></ul>
+                </div>
+                <div class="bottom">
+                    <input type="button" class="heartbtn btn" value="&#xe608">
+                    <input type="button" class="clearbtn btn" value="&#xe6b0">
+                </div>
+                <button class="addbtn">&#xe68a;</button>
+                <div class="mask"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

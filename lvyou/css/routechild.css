@@ -1,0 +1,8 @@
+.aboutInner .content h2{
+    text-align: center;
+}
+.aboutInner .content p.pushtime{
+    font-size: 12px;
+    text-align: center;
+    margin:5px 0;
+}

@@ -1,0 +1,150 @@
+*{
+    list-style: none;
+}
+.banner {
+    width: 100%;
+    height: 290px;
+    background: url(../img/3vmj.jpg)center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .inner{
+    width:235px;
+    height:96px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    margin-bottom:0px;
+}
+.banner .inner h2{
+    font-size: 20px;
+    font-weight:normal;
+    margin:0;
+}
+.banner .inner h3{
+    font-size: 20px;
+    font-weight:normal;
+    margin:0;
+}
+.about{
+    background: #f5f5f5;
+    padding:50px 0;
+}
+/*.aboutInner{*/
+    /*height:100px;*/
+
+/*}*/
+.aboutInner .item{
+    width:100%;
+    height:100%;
+    background: #2A3035;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.aboutInner .content{
+    width:100%;
+    height:100%;
+    padding:20px 50px;
+    background-color: #fff;
+}
+.aboutInner .item img{
+    width:96px;
+    height:77px;
+    opacity:.7;
+}
+.aboutInner .item span{
+    font-size: 36px;
+    color: #ccc;
+}
+.aboutInner .item h2,h4{
+    color: #ccc;
+    margin:0;
+}
+.aboutInner .item h4{
+    font-size: 16px;
+    font-weight:normal;
+}
+.aboutInner .navList{
+     width:100%;
+    margin-top: 2px;
+    padding: 0;
+    text-align: center;
+    line-height: 50px;
+ }
+.aboutInner .navItem {
+    width: 100%;
+    height: 50px;
+    color: #2a3035;
+    background: #fff;
+    padding:0 20px;
+}
+.aboutInner .navItem span{
+    display: block;
+    float: right;
+}
+.aboutInner .navItem.active {
+    color: #fff;
+    background: #2a3035;
+}
+.aboutInner .navItem:hover {
+    color: #fff;
+    background: #2a3035;
+    cursor: pointer;
+}
+.content .top{
+    display: flex;
+}
+.content .top a{
+    color: #000;
+    font-size: 14px;
+    line-height: 21px;
+}
+.content .line{
+    height:1px;
+    border-bottom: 1px solid #ccc;
+}
+.content .shotline{
+    width:50px;
+    height:1px;
+    border-bottom: 2px solid #000;
+}
+.content h2{
+    font-size: 18px;
+    color: #5a5a5a;
+    margin:10px 0;
+}
+.content h2 span{
+    font-size: 12px;
+    line-height: 26px;
+    color: #ccc;
+    margin:0;
+    font-weight:normal;
+}
+.content p.atitle{
+    line-height: 30px;
+    font-size: 14px;
+    color: rgb(33,33,33);
+
+}
+.contentrow{
+    margin:0 -65px;
+}
+.contentrow img{
+    width:100%;
+}
+.contentrow h4{
+    font-size: 16px;
+    color: #999;
+}
+.contentrow p{
+    font-size: 14px;
+    color: #706E6E;
+}
+.contentrow .rowright{
+    text-align: right;
+}

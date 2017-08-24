@@ -1,0 +1,315 @@
+*{
+    font-family: "微软雅黑";
+    list-style: none;
+    margin:0;
+    padding:0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+i{
+    font-family: "iconfont";
+    font-size: 0.5rem;
+    display: block;
+    font-style: normal;
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+html,body{
+    height:100%;
+}
+section.topbar{
+    width:100%;
+    height:1.08rem;
+    border-bottom: 1px solid #ccc;
+    background: #F5F7F6;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+.container{
+    width:90%;
+    height:100%;
+    margin:0 auto;
+}
+i.menu{
+    color: #14B363;
+    line-height: 1.08rem;
+    padding:0 0 0 0.5rem ;
+}
+.container-top a.back{
+    color: #14B363;
+    line-height: 1.08rem;
+    padding:0 0.5rem 0 0;
+    font-family: "iconfont";
+    font-size: 0.5rem;
+    display: block;
+    text-decoration: none;
+}
+.container-top{
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.container-top span{
+    font-size: 0.5rem;
+    font-weight: 500;
+    color: #000;
+    display: block;
+    line-height: 1.08rem;
+}
+.topbar div.menu{
+    background-color: #fff;
+    display: none;
+}
+.topbar ul li{
+    height:1.25rem;
+    font-size: 0.4rem;
+    line-height: 1.25rem;
+    color: #000;
+    border-bottom: 1px solid #d7d7d7;
+}
+.main{
+    width:100%;
+    height:100%;
+    padding-top: 1.08rem;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.main-container{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.item{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+
+}
+.item .ul-outer{
+    width:100%;
+    height:100%;
+    overflow: scroll;
+}
+.item ul{
+    width:100%;
+    height:auto;
+}
+.item ul li{
+    width:100%;
+    height:2.07rem;
+}
+.item ul li .box{
+    width:95%;
+    height:2.07rem;
+    float: right;
+    border-bottom: 1px solid #d7d7d7;
+    /*padding-right: ;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+.item .btn{
+    width:2.52rem;
+    height:1.2rem;
+    border-radius: 0.625rem;
+    background: #fff;
+    border:0;
+    outline:none;
+    font-family: "iconfont";
+    font-size: 0.5rem;
+    line-height: 1.2rem;
+    text-align: center;
+    color: #14B363;
+    cursor: pointer;
+}
+
+.item .btn:active{
+    background: #E6E6E6;
+    outline:none;
+}
+.wait,.done{
+    display: none;
+}
+.box-left{
+    width:95%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+.box-left p{
+    height:0.46rem;
+    font-size: 0.46rem;
+    color: #000;
+    line-height: 0.46rem;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.box-left time{
+    font-size: 0.42rem;
+    color: #888;
+    line-height: 0.42rem;
+}
+.box-left time span{
+    font-family: "iconfont";
+    font-size: 0.42rem;
+    line-height: 0.42rem;
+    float: right;
+}
+.box-left time span.active{
+    color: #14B363;
+}
+.box-right{
+    width:1rem;
+    height:100%;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:column;
+    justify-content: center;
+    display: none;
+}
+.box-right input{
+    display: block;
+    width:0.5rem;
+    height:0.5rem;
+    border: 1px solid #ddd;
+    background-color: #EEF2F1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-right: 0.46rem;
+}
+.addbtn{
+    width:1.4rem;
+    height:1.4rem;
+    border-radius: 50%;
+    background: #14B363;
+    font-family: "iconfont";
+    font-size: 0.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.4rem;
+    position: absolute;
+    right:0.5rem;
+    bottom:0.6rem;
+    box-shadow: 0 1px 5px #14B363;
+    outline:none;
+    border:0;
+}
+.item .add1{
+    background: #14B363;
+    color: #fff;
+    outline:none;
+}
+.item .add1:active{
+    background: #E6E6E6;
+    color: #14B363;
+    outline:none;
+}
+.bottom{
+    height:1.25rem;
+    width:100%;
+    border-top: 1px solid #C3C4C6;
+    position: absolute;
+    bottom:0;
+    left:0;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content:space-around;
+    align-items: center;
+    display: none;
+    background-color: #fff;
+}
+.add{
+    overflow: hidden;
+}
+.add .bottom{
+    border-top: 0;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+.add label{
+    width:100%;
+    height:100%;
+    display: block;
+    margin:10px auto;
+    position: relative;
+}
+.add textarea{
+    width:90%;
+    height:80%;
+    display: block;
+    margin:1rem auto;
+    resize: none;
+    font-size: 0.5rem;
+    box-sizing: border-box;
+    border:0;
+    outline:none;
+}
+.add label .notice{
+    width:2.7rem;
+    height:1.1rem;
+    position: absolute;
+    right:-0.5rem;
+    bottom:2.6rem;
+    line-height: 1.1rem;
+    color: #ccc;
+    font-size: 0.5rem;
+}
+.item .mask{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,.3);
+    display: none;
+}
+.notice span{
+    font-size: 0.4rem;
+}

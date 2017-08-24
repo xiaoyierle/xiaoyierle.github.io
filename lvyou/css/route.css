@@ -1,0 +1,38 @@
+.aboutInner .row div a{
+     display: block;
+     width:100%;
+ }
+.aboutInner .row img{
+    width:100%;
+    height:200px;
+}
+.aboutInner .row a.type{
+    font-size: 14px;
+    text-align: right;
+    color: #888;
+}
+.aboutInner .row a.season{
+    font-size: 18px;
+    text-align: left;
+    color: #777;
+}
+.aboutInner .row p.price{
+    margin:0;
+    color: #888;
+    font-size: 14px;
+    text-align: right;
+}
+.aboutInner .row p.price span{
+    color: #FF3C00;
+    font-size: 16px;
+}
+.aboutInner .row p.content{
+    width: 100%;
+    height: 100%;
+    padding:0;
+    background-color: #fff;
+    color: #888;
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 10px 0 0;
+}
