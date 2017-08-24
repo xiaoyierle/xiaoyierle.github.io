@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/8/9/009.
  */
-(function(){
+$(function(){
     var dians=$(".ui-dian li");
     var imgs=$(".bannerList li");
     var index;
@@ -34,7 +34,7 @@
     $(".ui-next").click(function(){
         move();
     })
-})()
+})
 /*$(function(){
     var floors=$(".box-bd");
     var ch=$(window).innerHeight();

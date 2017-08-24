@@ -111,7 +111,7 @@ window.onload = function () {
      }
      })*/
 
-   /* {
+ /*   {
         const bannerlist = document.querySelectorAll(".bannerList li");
         const dianlist = document.querySelectorAll(".ui-dian li");
         const bannerbox = document.querySelector(".banner");
