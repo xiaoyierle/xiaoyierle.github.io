@@ -11,7 +11,7 @@ function resizenow() {
     jQuery('.bonfire-pageloader-icon').css('right', ((browserwidth - jQuery(".bonfire-pageloader-icon").width())/2)).css('top', ((browserheight - jQuery(".bonfire-pageloader-icon").height())/2));
 };
 resizenow();
-/*$(function(){
+$(function(){
     var toparr=[];
     var index;
     $(".fp-section").each(function(i){
@@ -29,12 +29,13 @@ resizenow();
 
     $(".header-nav-right ul li").click(function(){
         index=($(this).index());
-        var ot=$(".topMenu").eq(index).offset().top;
+        var ot=$(".PD").eq(index).offset().top;
         $("html,body").animate({scrollTop:ot});
         $(".header-nav-right ul li a").removeClass("active1").eq(index).addClass("active1");
     });
-});*/
+});
 //百分比技能
+
 // $(function(){
     let canvas1=document.querySelector("#can1");
     let canvas2=document.querySelector("#can2");
@@ -73,10 +74,40 @@ resizenow();
     }
 /*})*/
 
+if($(this).scrollTop()>=$(".BN").offset().top){
+    $(".banner-left-middle").animate({left:0,animation:"bounceInLeft 1s"},1500)
+    $(".vertical-middle").animate({right:0,animation:"bounceInRight 1s"},1500)
+}
+var arr=[];
+$(".section").each(function(index,val){
+    arr.push($(this).offset().top);
+})
+console.log(arr);
+flag1=true;
+$(window).on("scroll",function(){
+    var st=$(this).scrollTop();
+    if(st>$(".JN").offset().top-200&&flag1===true){
+        flag1=false;
+        progress(canvas1,100,"#f55");
+        progress(canvas2,90,"#f55");
+        progress(canvas3,80,"#f55");
+        progress(canvas4,80,"#f55");
+    }
+    if(st>=$(".BN").offset().top){
+        $(".banner-left-middle").animate({left:0,animation:"bounceInLeft 1s"},1500)
+        $(".vertical-middle").animate({right:0,animation:"bounceInRight 1s"},1500)
+    }
+    for(var i=0;i<arr.length;i++){
+        if(st>arr[i]){
+            $(".header-nav-right ul li").find(".active").removeClass("active").end().eq(i).find("a").addClass("active");
+        }
+    }
 
+
+})
 //banner进入
 // $(function(){
-    $('#fullpage').fullpage({
+   /* $('#fullpage').fullpage({
         autoScrolling:false,
         verticalCentered:true,
         anchors:["p1","p2","p3","p4","p4","p6"],
@@ -117,5 +148,5 @@ resizenow();
                 progress(canvas4,80,"#f55");
             }
         }
-    });
+    });*/
 // });

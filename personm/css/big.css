@@ -1,0 +1,49 @@
+.container-fiuld{
+	width: 100%;
+}
+.container{
+	width: 992px;
+	margin: 0 auto;
+}
+.col-bg-1{
+	width: 8.33333%;
+}
+.col-bg-2{
+	width: 16.66666%;
+}
+.col-bg-3{
+	width:25%;
+}
+.col-bg-4{
+	width: 33.333333%;
+}
+.col-bg-5{
+	width: 41.666666%;
+}
+.col-bg-6{
+	width: 50%;
+}
+.col-bg-7{
+	width: 58.333333%;
+}
+.col-bg-8{
+	width: 66.666666%;
+}
+.col-bg-9{
+	width: 75%;
+}
+.col-bg-10{
+	width: 83.333333%;
+}
+.col-bg-11{
+	width: 91.666666%;
+}
+.col-bg-12{
+	width: 100%;
+}
+.col-sm-hid{
+	display: block;
+}
+.col-md-hid{
+	display: block;
+}
