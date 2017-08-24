@@ -7,15 +7,17 @@
         html,body{
             height:100%;
             margin:0;
+            width:100%;
+            overflow: hidden;
         }
         ul{
             color: #fff;
         }
         .main{
-            width:1000px;
+            width:100%;
             height:100%;
             margin: 0 auto;
-            background: url("img/58pic_52393e407b8f5.jpg") no-repeat 100% 100%;
+            background: url("img/58pic_52393e407b8f5.jpg") bottom;
             background-size: cover;
             animation:shake linear 1s infinite alternate;
         }
@@ -28,17 +30,19 @@
             }
         }
         .left{
-            width:800px;
             height:100%;
             /*background: #0e0;*/
-            float: left;
+            float: right;
+            margin-right: 200px;
         }
         .right{
             width: 200px;
             height:100%;
             background: rgba(13, 141, 255,0);
-            float: left;
-
+            float: right;
+            display: flex;
+            flex-direction:column;
+            justify-content:space-around;
         }
         .show{
             width:180px;
