@@ -543,3 +543,6 @@ a.hover{
 	/*display: flex;*/
 	/*align-items: flex-end;*/
 }
+.paddingtop{
+	padding-top: 50px;
+}
