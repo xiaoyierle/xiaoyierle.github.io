@@ -602,6 +602,7 @@ body{
 }
 .one{
     background: #F5F5F5;
+    position: relative;
 }
 .title{
     display: flex;
@@ -641,7 +642,14 @@ body{
     position: relative;
     margin:20px 0 0;
 }
-.route>div>div{
+.routeInner a{
+    display: block;
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.route>div>a>div{
+    height:150px;
     position: absolute;
     top:50%;
     transform: translateY(-50%);
@@ -673,6 +681,13 @@ body{
     background-image: url(../img/k41j.png);
     left: -74.5px;
     width: 1349px;
+}
+.one .bgbg{
+    position: absolute;
+    height:782px;
+    background-image: url(../img/k41j.png);
+    width:100%;
+    bottom: 0;
 }
 .row3 .route{
     float: left;
